@@ -1,0 +1,985 @@
+{
+  "intents": [
+    {
+      "intent": "Area_do_aluno",
+      "examples": [
+        {
+          "text": "Acessar conteúdos do aplicativo"
+        },
+        {
+          "text": "aprender"
+        },
+        {
+          "text": "Área do aluno"
+        },
+        {
+          "text": "assistir a vídeos"
+        },
+        {
+          "text": "Gostaria de estudar Inglês"
+        },
+        {
+          "text": "Quero acessar a área de estudantes"
+        },
+        {
+          "text": "Quero acessar a área do aluno"
+        },
+        {
+          "text": "quero estudar"
+        },
+        {
+          "text": "Quero estudar matemática"
+        },
+        {
+          "text": "quero tabuada"
+        },
+        {
+          "text": "Sou estudante"
+        },
+        {
+          "text": "Sou um aluno"
+        }
+      ],
+      "description": "Ala do aluno, estudante infantil."
+    },
+    {
+      "intent": "Bem-vindo",
+      "examples": [
+        {
+          "text": "boa noite"
+        },
+        {
+          "text": "Boa tarde"
+        },
+        {
+          "text": "Bom dia"
+        },
+        {
+          "text": "Muito obrigado"
+        },
+        {
+          "text": "Olá"
+        }
+      ],
+      "description": "saudação"
+    },
+    {
+      "intent": "Pais_Responsaveis",
+      "examples": [
+        {
+          "text": "Sou mãe"
+        },
+        {
+          "text": "Sou mãe do aluno"
+        },
+        {
+          "text": "Sou mãe do meu filho"
+        },
+        {
+          "text": "Sou pai"
+        },
+        {
+          "text": "Sou pai do aluno"
+        },
+        {
+          "text": "Sou pai do meu filho"
+        },
+        {
+          "text": "sou responsável pelo aluno"
+        },
+        {
+          "text": "sou responsável pelo meu filho"
+        }
+      ],
+      "description": "Ala dos Responsáveis pela criança."
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Aula_de_ingles",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "inglês",
+          "synonyms": [
+            "acessar aula de inglês",
+            "acessar músicas e vídeos da aula de inglês",
+            "aprender inglês",
+            "língua inglesa"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Aula_de_matematica",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "matemática",
+          "synonyms": [
+            "acessar aulas de matemática",
+            "adição",
+            "contas",
+            "divisão",
+            "multiplicação",
+            "soma",
+            "subtração",
+            "taboada"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Aula_de_portugues",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Língua portuguesa",
+          "synonyms": [
+            "acessar a atividade portuga",
+            "atividade de português",
+            "conteúdos de língua portuguesa",
+            "conteúdos de português",
+            "português"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Despedida",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Tchau",
+          "synonyms": [
+            "Até breve"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "gabarito_matematica",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "sim, gostaria de receber as respostas",
+          "synonyms": [
+            "Gostaria",
+            "Gostaria de receber",
+            "por favor",
+            "quero receber as respostas",
+            "sim"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "informacoes_conteudo",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Orientar",
+          "synonyms": [
+            "2",
+            "conteúdo",
+            "duração do curso",
+            "Grade de horas"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Informacoes_financeiras",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Informar",
+          "synonyms": [
+            "3",
+            "Boleto",
+            "Financeiras",
+            "Pagamentos"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Matricula_online",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Matricular",
+          "synonyms": [
+            "1",
+            "cadastrar",
+            "interessados em cursar"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Notificacoes",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Notificar",
+          "synonyms": [
+            "4",
+            "E-mail",
+            "SMS",
+            "Tela do Smartphone",
+            "Whatsapp"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "questões_matemática",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "já assisti ao vídeo",
+          "synonyms": [
+            "acabei de assistir",
+            "assisti ao vídeo",
+            "fazer questões",
+            "ok",
+            "podem liberar as questões",
+            "praticar",
+            "quero",
+            "quero as questões de matemática",
+            "quero praticar",
+            "quero ver as questões",
+            "sim",
+            "terminei de assistir ao vídeo",
+            "Tudo bem"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Resposta_matemática",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Tudo bem",
+          "synonyms": [
+            "claro",
+            "ok",
+            "sim"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "resposta_portugues",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Sim",
+          "synonyms": [
+            "ok",
+            "quero atividade de portugues",
+            "quero vídeos de portugues",
+            "tudo bem"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Saudação",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá. Seja bem-vindo ao atendimento virtual da escola de educação infantil."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1623641983105"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "Bem-vindo",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1623648587558",
+      "context": {
+        "Aula_de_ingles": "@Aula_de_ingles"
+      },
+      "conditions": "@Aula_de_ingles",
+      "event_name": "input",
+      "dialog_node": "handler_10_1623648587599"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "As notificações foram habilitadas."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_6_1623646843306",
+      "conditions": "@Notificacoes",
+      "event_name": "filled",
+      "dialog_node": "handler_2_1623646869836",
+      "previous_sibling": "handler_8_1623646843351"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Nesta semana a interação será por meio de vídeo, iniciaremos como dizer o nome das frutas em inglês. Bons Estudos! <iframe src=\"https://www.youtube.com/embed/hoSsui_lHpQ\" name=\"page\"></iframe> <a href=\"https://www.youtube.com/embed/hoSsui_lHpQ\" target=\"page\">Clique aqui para assistir ao vídeo</a>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "parent": "slot_9_1623648587558",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1623648587599",
+      "previous_sibling": "handler_10_1623648587599"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Será aberta uma nova guia para cadastrar o aluno. Agradecemos a preferência!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_8_1623645692875",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1623645692877",
+      "previous_sibling": "handler_7_1623645692877"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1623646724885",
+      "context": {
+        "Informacoes_financeiras": "@Informacoes_financeiras"
+      },
+      "conditions": "@Informacoes_financeiras",
+      "event_name": "input",
+      "dialog_node": "handler_3_1623646724913"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1623695272227",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1623695272256",
+      "previous_sibling": "handler_9_1623695272256"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1623695906306",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1623695906330",
+      "previous_sibling": "handler_6_1623695906330"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Será aberta uma nova guia para cadastrar o aluno. Agradecemos a preferência!"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_8_1623645692875",
+      "conditions": "@Matricula_online",
+      "event_name": "filled",
+      "dialog_node": "handler_4_1623645795983",
+      "previous_sibling": "handler_3_1623645692877"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "As informações financeiras, tais como valores e pagamentos, serão exibidas. Qualquer dúvida, fale conosco!"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_6_1623646724885",
+      "conditions": "@Informacoes_financeiras",
+      "event_name": "filled",
+      "dialog_node": "handler_4_1623646766694",
+      "previous_sibling": "handler_6_1623646724913"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1623646673607",
+      "context": {
+        "informacoes_conteudo": "@informacoes_conteudo"
+      },
+      "conditions": "@informacoes_conteudo",
+      "event_name": "input",
+      "dialog_node": "handler_5_1623646673622"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1623646843306",
+      "context": {
+        "Notificacoes": "@Notificacoes"
+      },
+      "conditions": "@Notificacoes",
+      "event_name": "input",
+      "dialog_node": "handler_5_1623646843351"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "As informações referente ao curso serão abertas."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_10_1623646673607",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1623646673622",
+      "previous_sibling": "handler_5_1623646673622"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "As informações financeiras, tais como valores e pagamentos, serão exibidas. Qualquer dúvida, fale conosco!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_6_1623646724885",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1623646724913",
+      "previous_sibling": "handler_3_1623646724913"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_2_1623695906306",
+      "event_name": "input",
+      "dialog_node": "handler_6_1623695906330"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1623645692875",
+      "context": {
+        "Matricula_online": "@Matricula_online"
+      },
+      "conditions": "@Matricula_online",
+      "event_name": "input",
+      "dialog_node": "handler_7_1623645692877"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "As informações referente ao curso serão abertas. "
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_10_1623646673607",
+      "conditions": "@informacoes_conteudo",
+      "event_name": "filled",
+      "dialog_node": "handler_7_1623646693433",
+      "previous_sibling": "handler_6_1623646673622"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "As notificações foram habilitadas."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_6_1623646843306",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1623646843351",
+      "previous_sibling": "handler_5_1623646843351"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_9_1623695272227",
+      "event_name": "input",
+      "dialog_node": "handler_9_1623695272256"
+    },
+    {
+      "type": "frame",
+      "title": "Inglês",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Nesta semana a interação será por meio de vídeo, iniciaremos como dizer o nome das frutas em inglês.\n<iframe src=\"https://www.youtube.com/embed/hoSsui_lHpQ\" name=\"page\"></iframe>\n<a href=\"https://www.youtube.com/embed/hoSsui_lHpQ\" target=\"page\">Clique aqui para assistir ao vídeo</a>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Bons estudos! Tenha uma ótima semana."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1623640704109",
+      "conditions": "@Aula_de_ingles",
+      "dialog_node": "node_1_1623647503403"
+    },
+    {
+      "type": "frame",
+      "title": "Confirmação",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Legal! Vamos aprender um pouco mais sobre a tabuada.\n<iframe src=\"https://www.youtube.com/embed/A40TiB76pRA\" name=\"page\"></iframe>\n<a href=\"https://www.youtube.com/embed/A40TiB76pRA\" target=\"page\">Clique aqui para assistir ao vídeo sobre tabuada.</a>\n\nAssim que assistir ao vídeo, avise-nos para liberarmos as questões. Tudo bem?"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1623647733736",
+      "conditions": "@Resposta_matemática",
+      "dialog_node": "node_1_1623695402395"
+    },
+    {
+      "type": "frame",
+      "title": "Pais e Responsáveis",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Você está na área de pais e responsáveis pelo aluno.\nAqui poderá realizar alguns procedimentos. \nPor favor, digite o número correspondente a opção desejada:\n1 - Matrícula Online;\n2 - Informações sobre o conteúdo do curso;\n3 - Informações Financeiras;\n4 - Notificações no celular, e-mail, SMS ou Whatsapp."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1623641983105",
+      "conditions": "#Pais_Responsaveis",
+      "dialog_node": "node_2_1623641089427",
+      "previous_sibling": "node_6_1623640704109"
+    },
+    {
+      "type": "frame",
+      "title": "Matrícula",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_2_1623641089427",
+      "conditions": "@Matricula_online",
+      "dialog_node": "node_2_1623644029028"
+    },
+    {
+      "type": "frame",
+      "title": "Finançeiras",
+      "parent": "node_2_1623641089427",
+      "conditions": "@Informacoes_financeiras",
+      "dialog_node": "node_2_1623646706932",
+      "previous_sibling": "node_6_1623646602561"
+    },
+    {
+      "type": "frame",
+      "title": "Notificações",
+      "parent": "node_2_1623641089427",
+      "conditions": "@Notificacoes",
+      "dialog_node": "node_2_1623646824037",
+      "previous_sibling": "node_2_1623646706932"
+    },
+    {
+      "type": "standard",
+      "title": "Exercícios",
+      "output": {
+        "generic": [
+          {
+            "title": "Parabéns por ter assistido ao vídeo! ",
+            "source": "https://bl6pap003files.storage.live.com/y4mGTlLSalrVLbNTU4PGGjmsfZmb5e2wpsdxek6GeujN9yscvwOTRU4eLI0nqH0SysCAZytKxfYETXyj7czCGc29VZfO48hdlcZNr1LEk348iQhh84mReQgzeX8Ezx531pVY9xPi76Z2AHCfQqFtL-paK5UM6YbZbLnIRWI9WhfS38T7gIfIp03c3QbsEyEU8O4nsP83TtShAP1yMdm2K4AUg/5%20x%201.jpg?psid=1&width=1280&height=720",
+            "description": "5x1",
+            "response_type": "image"
+          },
+          {
+            "title": "",
+            "source": "https://bl6pap003files.storage.live.com/y4msT67TKY34Sf6r3yWMocoY5Jwrgv3GKCwCVLHLKuLIF-laFQK1uvXUMHJNZDikw30gzPdo1yzA3Bx4B-vU_Z_ZiqwK0QFHlSoai9OhQufhY3cPnYT0mE7xGcmRIt4-PAWP-qBLyNlslUJRFgzFMQzMUfCTdOqfsKXecKZHHVDxzHc6CzbNs81zm7T9-J51U66pUcpdLCkJ9gQEZ44-KwFWA/5%20x%202.jpg?psid=1&width=1280&height=720",
+            "description": "5x2",
+            "response_type": "image"
+          },
+          {
+            "source": "https://bl6pap003files.storage.live.com/y4mgCbXbBAmm_bILhRbjdzKUVEPP9A8glKXSrPPrvnLPqmR0vEkdO2TObZFjrWIQvJPEuzYdGg_wvDck5nHITKPIGCuALnzeFAq4EWf4LPTdvmSwg5Qbkh-gXl3fA_JhAnR336pLARvDdypY8pS8TbtJUKzi4Dy_YM_zGtPuYMExoQXlOWx5EII2Jpg-rbgPKLu9wl2kEnrnFjxAQkYKSBzrw/5%20x%203.jpg?psid=1&width=1280&height=720",
+            "description": "5x3",
+            "response_type": "image"
+          },
+          {
+            "source": "https://bl6pap003files.storage.live.com/y4m1YaNSLlMkjy9_G_xDu7VL8gmOQ4hf_XZ3uu0ALCh5ZNXSyE4E26j8Sdog-WJCNz-Z3CPGNRs3KfYPWgvGxxJAz-63GdIz3CVoV5ltZsYXY6ftTkklcGUmfL9g0wjQVNtixt0r-7eelbkLY_Y2lILnvxofZnQXDtr0EJXVJb_Ko3o9j51yDHHRDcZ63xtwpWA4hCcovDh0mnED-V1GPCt1Q/5%20x%204.jpg?psid=1&width=1280&height=720",
+            "description": "5x4",
+            "response_type": "image"
+          },
+          {
+            "values": [
+              {
+                "text": "Gostaria de descobrir as respostas das questões?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1623695402395",
+      "conditions": "@questões_matemática",
+      "dialog_node": "node_2_1623696057208"
+    },
+    {
+      "type": "standard",
+      "title": "Gabarito",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "As respostas para os exercícios são, respectivamente: 5, 10, 15 e 20.\nEsperamos que tenha acertado todas as questões! Até breve."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1623696057208",
+      "conditions": "@gabarito_matematica",
+      "dialog_node": "node_3_1623697032838"
+    },
+    {
+      "type": "standard",
+      "title": "Área do aluno",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Seja bem-vindo ao canal do aluno!\nEste canal é para auxiliá-lo sobre os conteúdos de língua inglesa, português e matemática.\nQual deles gostaria de acessar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1623641983105",
+      "conditions": "#Area_do_aluno",
+      "dialog_node": "node_6_1623640704109"
+    },
+    {
+      "type": "frame",
+      "title": "Conteúdo",
+      "parent": "node_2_1623641089427",
+      "conditions": "@informacoes_conteudo",
+      "dialog_node": "node_6_1623646602561",
+      "previous_sibling": "node_2_1623644029028"
+    },
+    {
+      "type": "standard",
+      "title": "Confirmação",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Que legal!\n<iframe src=\"https://www.youtube.com/embed/PItPA1UTms8\" name=\"page\"></iframe>\n<a href=\"https://www.youtube.com/embed/PItPA1UTms8\" target=\"page\">Clique aqui para assistir ao vídeo de Língua Portuguesa</a>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "source": "https://www.espacoprofessor.com/wp-content/uploads/2021/04/DAVI-E-AS-GULOSEIMAS.jpg",
+            "description": "Segue anexa atividade:",
+            "response_type": "image"
+          },
+          {
+            "values": [
+              {
+                "text": "Bons estudos! Até a próxima."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1623647964902",
+      "conditions": "@resposta_portugues",
+      "dialog_node": "node_6_1623701466471"
+    },
+    {
+      "type": "standard",
+      "title": "Bem-vindo.",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Gostaria de receber informações sobre a área do aluno ou área de pais e responsáveis?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "conditions": "#Bem-vindo",
+      "dialog_node": "node_7_1623641983105"
+    },
+    {
+      "type": "frame",
+      "title": "Matemática",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá! Eu sou a Nath, sua assistente virtual que ensinará tabuada de um jeito divertido.\nVamos estudar e depois resolver questões de tabuada!\nSeparei um link que te ajudará a fixar alguns conceitos, você poderá assistir e voltar e voltar para colocarmos em prática, tudo bem?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1623640704109",
+      "conditions": "@Aula_de_matematica",
+      "dialog_node": "node_7_1623647733736",
+      "previous_sibling": "node_1_1623647503403"
+    },
+    {
+      "type": "standard",
+      "title": "Português",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caro, aluno. Eu sou o Liga e vou te auxiliar com suas atividades escolares.\nVamos iniciar com um vídeo interativo e, em seguida, atividade!\nTudo bem?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1623640704109",
+      "conditions": "@Aula_de_portugues",
+      "dialog_node": "node_9_1623647964902",
+      "previous_sibling": "node_7_1623647733736"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_6_1623646602561",
+      "variable": "$informacoes_conteudo",
+      "dialog_node": "slot_10_1623646673607"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1623695402395",
+      "dialog_node": "slot_2_1623695906306",
+      "previous_sibling": "node_2_1623696057208"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_2_1623646706932",
+      "variable": "$Informacoes_financeiras",
+      "dialog_node": "slot_6_1623646724885"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_2_1623646824037",
+      "variable": "$Notificacoes",
+      "dialog_node": "slot_6_1623646843306"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_2_1623644029028",
+      "variable": "$Matricula_online",
+      "dialog_node": "slot_8_1623645692875"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1623647503403",
+      "variable": "$Aula_de_ingles",
+      "dialog_node": "slot_9_1623648587558"
+    },
+    {
+      "type": "slot",
+      "parent": "node_7_1623647733736",
+      "dialog_node": "slot_9_1623695272227",
+      "previous_sibling": "node_1_1623695402395"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "Escola Infantil",
+  "language": "pt-br",
+  "description": ""
+}
